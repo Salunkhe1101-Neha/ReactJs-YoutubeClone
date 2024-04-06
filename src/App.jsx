@@ -1,15 +1,38 @@
 import React from 'react'
 import Head from './Components/Head'
 import Body from './Components/Body'
+import { Provider } from "react-redux";
+import appStore from './util/appStore';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import MainContainer from './Components/MainContainer';
+import VideoPage from './Components/VideoPage';
 const App = () => {
+  const appRouter = createBrowserRouter([
+    {
+      path: '/',
+      element: <Body />,
+      children: [
+        {
+          path: '/',
+          element: <MainContainer />
+        },
+        {
+          path: '/watch/:id',
+          element: <VideoPage />
+        }
+      ]
+    }
+  ])
   return (
-    <div>
-       <Head/>
-       <Body/>
-       <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    </div>
+
+    <Provider store={appStore}>
+      <div>
+        <Head />
+        <RouterProvider router={appRouter} />
+
+      </div>
+    </Provider>
+
   )
 }
 

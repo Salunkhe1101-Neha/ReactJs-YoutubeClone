@@ -1,0 +1,29 @@
+/* Sidebar.css */
+
+.sidebar {
+    width: 160px;
+    background-color: #fff;
+    border-right: 1px solid #dadce0;
+  }
+  
+  .sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu-item {
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+  
+  .sidebar-menu-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .sidebar-divider {
+    border: 0;
+    border-top: 1px solid #dadce0;
+    margin: 6px 0;
+  }
+  
