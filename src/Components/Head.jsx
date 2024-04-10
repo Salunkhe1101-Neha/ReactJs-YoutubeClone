@@ -8,7 +8,7 @@ function Head() {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [searchSuggestion, setSearchSuggestion] = useState([]);
-
+  const[showSuggestion, setShowSuggestion]=useState(false)
   const dispatch = useDispatch();
   const handleSidebar = () => {
     dispatch(toggleSidebar())
@@ -61,17 +61,19 @@ function Head() {
             placeholder="Search"
             className="input"
             onChange={(event) => setSearchTerm(event.target.value)}
+            onFocus={()=>setShowSuggestion(true)}
+            onBlur={()=>setShowSuggestion(false)}
           />
           <button className="button">Search</button>
         </form>
 
-        <div className='bg-white fixed mt-10 w-[400px] -ml-20'>
+        <div className='bg-white fixed mt-10 w-[400px] -ml-20 z-10'>
           <ul>
-            {searchSuggestion &&
+            {showSuggestion &&
              searchSuggestion. map((data)=>
             {
               return(
-                <li key={data}><i className="fa-solid fa-magnifying-glass"></i><span> {data} </span> </li>
+                <li className='py-2 ml-2 py-2 hover:bg-gray-300 hover:' key={data}><i className="fa-solid fa-magnifying-glass"></i><span> {data} </span> </li>
               )
             })
             }

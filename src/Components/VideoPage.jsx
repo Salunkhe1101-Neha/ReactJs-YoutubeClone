@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { closeSidebar } from '../util/appSlice';
+import Comments from './Comments';
 const VideoPage = () => {
   const dispatch=useDispatch();
   
@@ -55,6 +56,7 @@ const VideoPage = () => {
           <p className="text-sm text-gray-700 mb-2">Views: {video.statistics.viewCount}</p>
         </div>
       </div>
+      <Comments id={id}></Comments>
     </div>
   );
 };
