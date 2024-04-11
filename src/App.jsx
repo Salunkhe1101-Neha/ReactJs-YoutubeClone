@@ -6,6 +6,7 @@ import appStore from './util/appStore';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import MainContainer from './Components/MainContainer';
 import VideoPage from './Components/VideoPage';
+import ButtonSearchResult from './Components/ButtonSearchResult';
 const App = () => {
   const appRouter = createBrowserRouter([
     {
@@ -19,8 +20,12 @@ const App = () => {
         {
           path: '/watch/:id',
           element: <VideoPage />
+        },
+        {
+          path:'/ButtonSearchResult',
+          element:<ButtonSearchResult/>
         }
-      ]
+      ],
     }
   ])
   return (

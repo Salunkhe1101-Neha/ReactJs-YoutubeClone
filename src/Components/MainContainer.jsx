@@ -4,10 +4,9 @@ import VideoContainer from './VideoContainer'
 import VideoPage from './VideoPage'
 const MainContainer = () => {
   return (
-    <div className='ml-10 mt-10'>
-        <ButtonList/>
-        <VideoContainer/>
-       
+    <div className='flex flex-col overflow-x-hidden mt-16'>
+         <ButtonList/>
+         <VideoContainer/>
     </div>
   )
 }

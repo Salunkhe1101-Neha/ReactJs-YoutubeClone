@@ -81,10 +81,6 @@ function Head() {
 
           </ul>
         </div>
-
-
-
-
       </div>
       <div className="top-buttons">
         <button className="top-button">Sign in</button>

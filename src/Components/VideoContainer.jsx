@@ -33,9 +33,9 @@ const VideoContainer = () => {
   };
   console.log(videos)
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container px-4 py-8 relative overflow-x-hidden">
       <h1 className="text-3xl font-bold mb-8">Most Popular YouTube Videos</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {videos.map(video => (
           <div key={video.id} className="bg-white shadow-md rounded-md overflow-hidden transform transition duration-300 hover:scale-105">
             <Link to={`/watch/${video.id}`}>

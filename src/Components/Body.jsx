@@ -8,10 +8,11 @@ const Body = () => {
   const sts= useSelector((store)=>store.app.isOpen)
   console.log(sts)
   return (
-    <div className='flex gap-3'>
+    <div className='flex'>
       {sts? <><div><Sidebar/></div></>: null}
-      {/* {sts? <><div className='ml-[150px]'><MainContainer/></div></>: <MainContainer/>} */}
-      <Outlet/>
+      <div className='ml-3'>
+        <Outlet/>
+      </div>
       
     </div>
   )

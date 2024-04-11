@@ -40,7 +40,7 @@ const VideoPage = () => {
   const videoSrc = `https://www.youtube.com/embed/${id}`;
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 ml-20">
       <div className="bg-white shadow-md rounded-md overflow-hidden">
         <iframe
           width="100%"
